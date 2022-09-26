@@ -3,6 +3,7 @@ package lesson06;
 public class Main01 {
 
     public static int a = 1;
+    public int nonStaticA = 1;
     protected static int d = 4;
     static int c = 3;
     private static int b = 2;
