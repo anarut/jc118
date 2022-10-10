@@ -53,5 +53,21 @@ public class MainClass {
         char unicodeChar = 'v';
         System.out.println(unicodeChar);
 
+
+        Integer as1 = 55;
+        Integer as2 = Integer.valueOf(55);
+        int as3 = as2;
+
+        Integer fail = null;
+        if (fail != null) {
+            go(fail);
+        } else {
+            System.out.println("oioioi");
+        }
+
+    }
+
+    static void go(int a) {
+
     }
 }

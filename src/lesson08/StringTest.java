@@ -22,5 +22,7 @@ public class StringTest {
         end = System.currentTimeMillis();
         System.out.println(end - start + " millis");
         System.out.println(s1.length());
+
+
     }
 }
