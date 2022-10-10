@@ -7,6 +7,6 @@ public abstract class FlyingAnimal extends Animal {
     }
 
     public void fly() {
-        System.out.println("flying");
+        System.out.println("flying flying");
     }
 }

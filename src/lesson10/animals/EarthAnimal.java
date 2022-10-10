@@ -1,6 +1,6 @@
 package lesson10.animals;
 
-public abstract class EarthAnimal extends Animal {
+public abstract class EarthAnimal extends Animal implements Earthable {
 
     private Integer legs;
 
