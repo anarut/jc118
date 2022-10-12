@@ -11,4 +11,8 @@ public interface Hero {
     void useSkill3();
 
     void attack(Hero hero);
+
+    default void newMethod() {
+        System.out.println("asdas");
+    }
 }
