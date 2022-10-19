@@ -62,7 +62,6 @@ public class GenericAccount<T extends Object, K extends Number> {
 
 
     public <M> M test(M a) {
-
         T id = getId();
         K amount = getAmount();
         int i = amount.intValue();
