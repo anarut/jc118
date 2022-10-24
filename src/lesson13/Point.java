@@ -1,6 +1,6 @@
 package lesson13;
 
-public class Point {
+public class Point implements Comparable<Point> {
 
     private int x;
     private int y;
@@ -46,4 +46,23 @@ public class Point {
     }
 
 
+    @Override
+    public int compareTo(Point o) {
+        if (this.x == o.x) {
+            return Integer.compare(this.y, o.y);
+//            return this.y == o.y ? 0 : (this.y > o.y ? 1 : -1);
+
+//            if (this.y == o.y) {
+//                return 0;
+//            } else if (this.y > o.y) {
+//                return 1;
+//            } else {
+//                return -1;
+//            }
+        } else if (this.x > o.x) {
+            return 1;
+        } else {
+            return -1;
+        }
+    }
 }

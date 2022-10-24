@@ -1,6 +1,7 @@
 package lesson13;
 
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -41,6 +42,9 @@ public class MapMain {
 //            entry.setValue(4);
         }
 
+        HashMap<Integer, Integer> newMap = new HashMap<>(map);
 
+        Map<Integer, Integer> integerIntegerMap = Collections.unmodifiableMap(map);
+        integerIntegerMap.put(1, 1);
     }
 }
