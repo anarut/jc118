@@ -37,7 +37,8 @@ public class Point implements Comparable<Point> {
         if (anotherPoint == null || getClass() != anotherPoint.getClass()) return false;
 
         Point point = (Point) anotherPoint;
-        return x == point.x && y == point.y;
+        return x == point.x
+                && y == point.y;
     }
 
     @Override
