@@ -2,9 +2,11 @@ package lesson16;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -17,9 +19,14 @@ public class Files {
 //        writeIntoFile();
         try {
             readFromFile();
+
+            final FileReader fileReader = new FileReader(FILE_NAME);
+            final BufferedReader bufferedReader = new BufferedReader(fileReader);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 
     public static void showProps() {
@@ -52,6 +59,7 @@ public class Files {
             bufferedOutputStream = new BufferedOutputStream(fileOutputStream);
             String txt = "Hello world!";
             bufferedOutputStream.write(txt.getBytes());
+            bufferedOutputStream.flush();
 //            bufferedOutputStream.close();
         } catch (IOException e) {
             e.printStackTrace();
