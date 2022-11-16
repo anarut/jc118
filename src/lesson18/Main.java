@@ -3,10 +3,13 @@ package lesson18;
 public class Main {
 
     public static void main(String[] args) {
+        int j = 5;
+        j +=4;
+        int l = j;
         Applicable sum1 = new Applicable() {
             @Override
-            public int apply(int a, int b) {
-                return a + b;
+                public int apply(int a, int b) {
+                return a + b + l;
             }
         };
 
@@ -16,7 +19,13 @@ public class Main {
         };
 
         Applicable sum2_2 = (x, y) -> x + y;
+        Applicable max_1 = (x, y) -> Math.max(x, y) + l;
+        Applicable min_1 = (x, y) -> Math.min(x, y);
 
+
+        int a1 = max_1.apply(4,5);
+        //l = 6;
+        int a2 = max_1.apply(4,5);
         Applicable sum3 = Integer::sum;
         Applicable sum4 = sum1::apply;
 
